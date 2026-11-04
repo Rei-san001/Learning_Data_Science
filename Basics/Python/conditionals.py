@@ -15,7 +15,7 @@ else:
     
 # nested if else
 """
-if(condition 1){
+if(1st condition ){
     if(condition){
         
     }
