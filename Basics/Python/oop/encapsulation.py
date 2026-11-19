@@ -9,8 +9,11 @@ class BankAccount:
         self.__balance = balance # basically we made it private 
         
     # getter function
-    def get_balance(self):
-        return self.__balance
+    def get_balance(self, password):
+        if password == "1234":
+            return self.__balance
+        else:
+            return "You are not Authenticated"
     
     # setter function
     def withdraw(self, amount):
@@ -21,14 +24,14 @@ class BankAccount:
     
 
 acc = BankAccount(1000)
-balance = acc.get_balance()
+balance = acc.get_balance("12346")
 print(f"Main balance : {balance}")
 
 
-acc.deposit(500)
-balance = acc.get_balance()
-print(f"After deposit, balance =  {balance}")
+# acc.deposit(500)
+# balance = acc.get_balance()
+# print(f"After deposit, balance =  {balance}")
 
-acc.withdraw(500)
-balance = acc.get_balance()
-print(f"After Withdraw, balance =  {balance}")
+# acc.withdraw(500)
+# balance = acc.get_balance()
+# print(f"After Withdraw, balance =  {balance}")
