@@ -45,26 +45,73 @@
 # MULTI LEVEL INHERITANCE (GRAND PARENT, PARENT, CHILD)
 
 
-class Animal:
-    def eat(self):
-        print("This animal eats rice")
+# class Animal:
+#     def eat(self):
+#         print("This animal eats rice")
 
 
-class Dog(Animal):
-    def bark(self):
-        print("woof!")
+# class Dog(Animal):
+#     def bark(self):
+#         print("woof!")
         
-class Puppy(Dog):
-    def weep(self):
-        print("weeping")
+# class Puppy(Dog):
+#     def weep(self):
+#         print("weeping")
 
 
 
-d = Dog()
-d.bark()
-d.eat()
+# d = Dog()
+# d.bark()
+# d.eat()
 
-p = Puppy()
-p.eat()
-p.bark()
-p.weep()
+# p = Puppy()
+# p.eat()
+# p.bark()
+# p.weep()
+
+
+# HIERARCHICAL INHERITANCE (ONE PARENT, SOME CHILD)
+
+# class Animal:
+#     def eat(self):
+#         print("This animal eats rice")
+
+
+# class Dog(Animal):
+#     def bark(self):
+#         print("woof!")
+
+# class Cat(Animal):
+#     def meow(self):
+#         print("Meowing")
+        
+        
+# d = Dog()
+# c = Cat()
+
+# d.eat()
+# d.bark()
+
+
+# c.eat()
+# c.meow()
+
+
+#MULTIPLE INHERITANCE (ONE CHILD, MANY PARENTS)
+
+class Father:
+    def skills(self):
+        print("Gardening, Cooking")
+
+class Mother:
+    def hobbies(self):
+        print("Painting, Music")
+        
+class Child(Father, Mother):
+    def own(self):
+        print("coding")
+        
+c = Child()
+c.own()
+c.skills()
+c.hobbies()
